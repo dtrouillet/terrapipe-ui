@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/tabler";
+@import "assets/scss/demo";
+@import "assets/scss/tabler-flags";
+@import "assets/scss/tabler-payments";
+//@import "assets/scss/tabler-vendors";
+
+/* Importing Bootstrap SCSS file. */
+//@import '~bootstrap/scss/bootstrap';
+
+form {
+  margin-block-end: 0;
+}
