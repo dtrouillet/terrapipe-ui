@@ -518,17 +518,7 @@ export class AppComponent implements AfterViewInit{
   }
 
 
-  swithTheme(){
-    if(this.theme === 'theme-light'){
-      this.renderer.addClass(this.document.body, 'theme-dark');
-      this.renderer.removeClass(this.document.body, 'theme-light');
-      this.theme = 'theme-dark';
-    }else {
-      this.renderer.removeClass(this.document.body, 'theme-dark');
-      this.renderer.addClass(this.document.body, 'theme-light');
-      this.theme = 'theme-light';
-    }
-  }
+
   ngAfterViewInit() {
     const map = new Map({
       selector: '#map-world',
