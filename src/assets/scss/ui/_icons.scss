@@ -13,7 +13,7 @@ i-tabler.icon > svg, .icon:not(i-tabler){
   }
 }
 
-.icon-inline {
+i-tabler.icon-inline > svg, .icon-inline:not(i-tabler){
   width: 1em;
   height: 1em;
   font-size: divide(16, 14) * 1em;

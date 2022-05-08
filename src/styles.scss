@@ -15,4 +15,9 @@ form {
 i-tabler {
   width: inherit !important;
   height: inherit !important;
+  display: inherit;
+}
+
+.hide-arrow::after {
+  display:none;
 }
