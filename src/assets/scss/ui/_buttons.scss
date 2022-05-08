@@ -24,7 +24,7 @@
     cursor: not-allowed;
   }
 
-  .icon {
+  i-tabler.icon > svg, .icon:not(i-tabler) {
     width: $icon-size;
     height: $icon-size;
     min-width: $icon-size;
@@ -88,7 +88,7 @@
   background-color: transparent;
   border-color: transparent;
 
-  .icon {
+  i-tabler.icon + svg {
     color: inherit;
   }
 
@@ -121,7 +121,7 @@
     min-width: add($btn-line-height * $btn-font-size-sm + $btn-padding-y-sm * 2, $btn-border-width * 2);
   }
 
-  .icon {
+  i-tabler.icon > svg, .icon :not(i-tabler) {
     margin: 0 -1em;
   }
 }
@@ -230,7 +230,7 @@
     color: $primary;
   }
 
-  .icon {
+  i-tabler.icon > svg, .icon:not(i-tabler) {
     margin: 0;
     width: 1.25rem;
     height: 1.25rem;

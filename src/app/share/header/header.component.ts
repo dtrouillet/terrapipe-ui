@@ -1,5 +1,6 @@
-import {Component, Inject, OnInit, Renderer2} from '@angular/core';
+import {Component, ElementRef, Inject, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
+import {TablerIconComponent} from "angular-tabler-icons";
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,15 @@ import {DOCUMENT} from "@angular/common";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
   theme = 'theme-light';
+
   constructor(@Inject(DOCUMENT) private document: Document,
               private renderer: Renderer2) { }
 
   ngOnInit(): void {
   }
+
 
   swithTheme(){
     if(this.theme === 'theme-light'){
