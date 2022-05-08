@@ -6,22 +6,25 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {TablerIconsModule} from "angular-tabler-icons";
 import * as TablerIcons from 'angular-tabler-icons/icons';
 import { NotificationComponent } from './notification/notification.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     MenuComponent,
-    NotificationComponent
+    NotificationComponent,
+    PageHeaderComponent
   ],
   exports: [
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    PageHeaderComponent
   ],
   imports: [
     CommonModule,
     NgbModule,
-      TablerIconsModule.pick(TablerIcons)
+    TablerIconsModule.pick(TablerIcons)
   ]
 })
 export class ShareModule { }
