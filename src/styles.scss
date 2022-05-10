@@ -21,3 +21,7 @@ i-tabler {
 .hide-arrow::after {
   display:none;
 }
+
+a[routerLink], a[ngbDropdownToggle], a[click] {
+  cursor: pointer;
+}
