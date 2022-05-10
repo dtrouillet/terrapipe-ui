@@ -1,10 +1,9 @@
 <div class="page" *ngIf="!test">
-  <app-header></app-header>
-  <app-menu></app-menu>
+  <div [ngClass]="{'sticky-top': stickyTop}">
+    <app-header></app-header>
+    <app-menu></app-menu>
+  </div>
   <div class="page-wrapper">
-    <div class="container-xl">
-      <app-page-header></app-page-header>
-    </div>
     <ng-container *ngTemplateOutlet="router"></ng-container>
     <footer class="footer footer-transparent d-print-none">
       <div class="container-xl">

@@ -8,6 +8,7 @@ import * as TablerIcons from 'angular-tabler-icons/icons';
 import {NotificationComponent} from './notification/notification.component';
 import {PageHeaderComponent} from './page-header/page-header.component';
 import {RouterModule} from '@angular/router';
+import { ErrorComponent } from './error/error.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {RouterModule} from '@angular/router';
     HeaderComponent,
     MenuComponent,
     NotificationComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    ErrorComponent
   ],
     exports: [
         HeaderComponent,

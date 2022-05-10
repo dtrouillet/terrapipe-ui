@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {ErrorComponent} from './share/error/error.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
     path: 'test',
     loadChildren: () => import('./test/test.module').then(m => m.TestModule)
   },
-  { path: '',   redirectTo: '/home', pathMatch: 'full' }
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: '**',   component: ErrorComponent}
 ];
 
 @NgModule({
