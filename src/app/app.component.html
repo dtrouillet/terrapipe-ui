@@ -1,11 +1,11 @@
-<div class="page">
+<div class="page" *ngIf="!test">
   <app-header></app-header>
   <app-menu></app-menu>
   <div class="page-wrapper">
     <div class="container-xl">
       <app-page-header></app-page-header>
     </div>
-    <router-outlet></router-outlet>
+    <ng-container *ngTemplateOutlet="router"></ng-container>
     <footer class="footer footer-transparent d-print-none">
       <div class="container-xl">
         <div class="row text-center align-items-center flex-row-reverse">
@@ -52,3 +52,11 @@
     </footer>
   </div>
 </div>
+<div class="page page-center" *ngIf="test">
+  <ng-container *ngTemplateOutlet="router"></ng-container>
+</div>
+
+<ng-template #router>
+  <router-outlet>
+  </router-outlet>
+</ng-template>
