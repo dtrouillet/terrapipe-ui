@@ -1,0 +1,19 @@
+<div class="card card-sm">
+  <div class="card-body">
+    <div class="row align-items-center">
+      <div class="col-auto" *ngIf="icon">
+        <span class="text-white avatar" [ngClass]="classBgColor">
+          <i-tabler class="icon" [name]="icon"></i-tabler>
+        </span>
+      </div>
+      <div class="col">
+        <div class="font-weight-medium">
+          {{line1}}
+        </div>
+        <div class="text-muted">
+          {{line2}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex align-items-center">
+      <div class="subheader">{{title}}</div>
+      <div class="ms-auto lh-1">
+        <div class="dropdown" ngbDropdown>
+          <a class="dropdown-toggle text-muted" data-bs-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>{{dropdownItems[0]}}</a>
+          <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+            <a class="dropdown-item" [ngClass]="{'active': index === 0}" ngbDropdownItem
+               *ngFor="let item of dropdownItems; index as index ">{{item}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-baseline">
+      <div class="h1 mb-3 me-2">{{metric}}</div>
+      <div class="me-auto" *ngIf="evolution !== undefined">
+        <span class="d-inline-flex align-items-center lh-1"
+              [ngClass]="{'text-green': evolution > 0, 'text-yellow': evolution === 0, 'text-red': evolution < 0}">
+          {{evolution}}%
+          <i-tabler class="icon ms-1" name="trending-up" *ngIf="evolution > 0"></i-tabler>
+          <i-tabler class="icon ms-1" name="trending-down" *ngIf="evolution < 0"></i-tabler>
+          <i-tabler class="icon ms-1" name="minus" *ngIf="evolution === 0"></i-tabler>
+        </span>
+      </div>
+    </div>
+
+    <apx-chart *ngIf="chartOptions && inBody" [labels]="chartOptions.labels" [colors]="chartOptions.colors"
+               [legend]="chartOptions.legend" [stroke]="chartOptions.stroke"
+               [grid]="chartOptions.grid" [xaxis]="chartOptions.xaxis"
+               [yaxis]="chartOptions.yaxis" [series]="chartOptions.series"
+               [dataLabels]="chartOptions.dataLabels" [fill]="chartOptions.fill"
+               [chart]="chartOptions.chart" [plotOptions]="chartOptions.plotOptions" class="chart-sm"></apx-chart>
+  </div>
+  <apx-chart *ngIf="chartOptions && !inBody" [labels]="chartOptions.labels" [colors]="chartOptions.colors"
+             [legend]="chartOptions.legend" [stroke]="chartOptions.stroke"
+             [grid]="chartOptions.grid" [xaxis]="chartOptions.xaxis"
+             [yaxis]="chartOptions.yaxis" [series]="chartOptions.series"
+             [dataLabels]="chartOptions.dataLabels" [fill]="chartOptions.fill"
+             [chart]="chartOptions.chart" [plotOptions]="chartOptions.plotOptions" class="chart-sm"></apx-chart>
+  <!--  <ng-content></ng-content>-->
+</div>

@@ -20,23 +20,23 @@ i-tabler.icon-inline > svg, .icon-inline:not(i-tabler){
   vertical-align: -0.2em;
 }
 
-.icon-filled {
+i-tabler.icon-filled > svg, .icon-filled:not(i-tabler) {
   fill: currentColor;
 }
 
-.icon-sm {
+i-tabler.icon-sm > svg, .icon-sm:not(i-tabler) {
   width: 1rem;
   height: 1rem;
   stroke-width: 1;
 }
 
-.icon-md {
+i-tabler.icon-md > svg, .icon-md:not(i-tabler) {
   width: 2.5rem;
   height: 2.5rem;
   stroke-width: 1;
 }
 
-.icon-lg {
+i-tabler.icon-lg > svg, .icon-lg:not(i-tabler) {
   width: 3.5rem;
   height: 3.5rem;
   stroke-width: 1;
