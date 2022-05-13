@@ -6,16 +6,13 @@ import {BehaviorSubject, Observable} from 'rxjs';
 })
 export class ConfigurationService {
   private stickyTop = new BehaviorSubject(true);
+  private navbarCollpsed = new BehaviorSubject(false);
 
   constructor() {
   }
 
   getStickyTop(): Observable<boolean> {
     return this.stickyTop.asObservable();
-  }
-
-  setStickyTop(stickyTop: boolean): void {
-    this.stickyTop.next(stickyTop);
   }
 
   toggletStickyTop(): void {
@@ -25,4 +22,19 @@ export class ConfigurationService {
       this.stickyTop.next(true);
     }
   }
+
+
+  getNavbarCollapsed(): Observable<boolean> {
+    return this.navbarCollpsed.asObservable();
+  }
+
+  toggleNavbarCollapsed(): void {
+    if (this.navbarCollpsed.getValue()) {
+      this.navbarCollpsed.next(false);
+    } else {
+      this.navbarCollpsed.next(true);
+    }
+  }
+
+
 }
