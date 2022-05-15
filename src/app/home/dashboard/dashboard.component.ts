@@ -3,6 +3,7 @@ import {DOCUMENT} from "@angular/common";
 import * as Map from "jsvectormap";
 import 'jsvectormap/dist/maps/world.js'
 import { ApplicationService } from 'ebad-api';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,6 +13,29 @@ import { ApplicationService } from 'ebad-api';
 export class DashboardComponent implements AfterViewInit {
 
   title = 'ebad';
+
+  cards = [{
+    icon: 'currency-dollar',
+    color: 'blue',
+    line1: '132 Sales',
+    line2: '12 waiting payments',
+  },{
+    icon: 'shopping-cart',
+    color: 'green',
+    line1: '78 Orders',
+    line2: '32 shipped',
+  },{
+    icon: 'brand-twitter',
+    color: 'twitter',
+    line1: '623 Shares',
+    line2: '16 today',
+  },{
+    icon: 'brand-facebook',
+    color: 'facebook',
+    line1: '132 Likes',
+    line2: '21 today',
+  },]
+
 
   public theme = 'theme-light';
   // @ViewChild("chart") chart: ChartComponent;
@@ -731,4 +755,10 @@ export class DashboardComponent implements AfterViewInit {
       map.updateSize();
     });
   }
+
+  drop(event: CdkDragDrop<any[]>) {
+      moveItemInArray(this.cards, event.previousIndex, event.currentIndex);
+  }
+
+
 }

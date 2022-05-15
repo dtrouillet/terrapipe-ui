@@ -8,6 +8,7 @@ import {TablerIconsModule} from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
 import {NgApexchartsModule} from 'ng-apexcharts';
 import {HttpClientModule} from '@angular/common/http';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
     ShareModule,
     TablerIconsModule.pick(TablerIcons),
     NgApexchartsModule,
-    HttpClientModule
+    HttpClientModule,
+    DragDropModule
   ]
 })
 export class HomeModule { }

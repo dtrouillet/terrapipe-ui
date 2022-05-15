@@ -65,34 +65,19 @@
                          [inBody]="true">
       </app-card-chart-sm>
 
-      <div class="col-12">
-        <div class="row row-cards">
-          <app-card-icon-sm class="col-sm-6 col-lg-3"
-                            icon="currency-dollar"
-                            color="blue"
-                            line1="132 Sales"
-                            line2="12 waiting payments">
-          </app-card-icon-sm>
-          <app-card-icon-sm class="col-sm-6 col-lg-3"
-                            icon="shopping-cart"
-                            color="green"
-                            line1="78 Orders"
-                            line2="32 shipped">
-          </app-card-icon-sm>
-          <app-card-icon-sm class="col-sm-6 col-lg-3"
-                            icon="brand-twitter"
-                            color="twitter"
-                            line1="623 Shares"
-                            line2="16 today">
-          </app-card-icon-sm>
-          <app-card-icon-sm class="col-sm-6 col-lg-3"
-                            icon="brand-facebook"
-                            color="facebook"
-                            line1="132 Likes"
-                            line2="21 today">
-          </app-card-icon-sm>
+        <div class="col-12">
+          <div class="row row-cards" cdkDropListOrientation="horizontal" cdkDropList
+               (cdkDropListDropped)="drop($event)" >
+            <app-card-icon-sm *ngFor="let card of cards"
+                              cdkDrag
+                              class="col-sm-6 col-lg-3"
+                              icon="{{card.icon}}"
+                              color="{{card.color}}"
+                              line1="{{card.line1}}"
+                              line2="{{card.line2}}">
+            </app-card-icon-sm>
+          </div>
         </div>
-      </div>
       <div class="col-lg-6">
         <div class="card">
           <div class="card-body">
