@@ -1,6 +1,5 @@
-import {Component, ElementRef, Inject, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, Inject, OnInit, Renderer2} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
-import {TablerIconComponent} from "angular-tabler-icons";
 import {ConfigurationService} from '../../core/configuration.service';
 
 @Component({

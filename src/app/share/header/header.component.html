@@ -43,12 +43,12 @@
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow" ngbDropdownMenu>
-                    <a href="#" class="dropdown-item">Set status</a>
-                    <a href="#" class="dropdown-item">Profile & account</a>
-                    <a href="#" class="dropdown-item">Feedback</a>
+                    <a href="#" class="dropdown-item" ngbDropdownItem>Set status</a>
+                    <a href="#" class="dropdown-item" ngbDropdownItem routerLink="/me/account">Profile & account</a>
+                    <a href="#" class="dropdown-item" ngbDropdownItem>Feedback</a>
                     <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">Settings</a>
-                    <a href="#" class="dropdown-item" routerLink="/auth/signin">Logout</a>
+                    <a href="#" class="dropdown-item" ngbDropdownItem routerLink="/me/settings">Settings</a>
+                    <a href="#" class="dropdown-item" ngbDropdownItem routerLink="/auth/signin">Logout</a>
                 </div>
             </div>
         </div>

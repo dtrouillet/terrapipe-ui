@@ -12,8 +12,8 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
   {
-    path: 'test',
-    loadChildren: () => import('./test/test.module').then(m => m.TestModule)
+    path: 'me',
+    loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
   },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**',   component: ErrorComponent}
