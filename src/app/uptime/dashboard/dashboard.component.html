@@ -1,0 +1,109 @@
+<app-page-uptime-header></app-page-uptime-header>
+<div class="page-body">
+  <div class="container-xl">
+    <div class="row row-cards">
+      <div class="col-md-4">
+        <app-card-metrics title="Currently Up For" text="14 days 2 hours 54 mins 34 seconds"></app-card-metrics>
+      </div>
+      <div class="col-md-4">
+        <app-card-metrics title="Last checked at" text="27 seconds ago"></app-card-metrics>
+      </div>
+      <div class="col-md-4">
+        <app-card-metrics title="Incidents" text="3"></app-card-metrics>
+      </div>
+
+      <app-card-chart-sm class="col-sm-6 col-lg-3"
+                         [chartOptions]="chartOptions1"
+                         [dropdownItems]="['Last 7 days', 'Last 30 days', 'Last 3 months']"
+                         title="REVENUE"
+                         metric="$4,300"
+                         [evolution]="9"
+                         [inBody]="false">
+      </app-card-chart-sm>
+      <app-card-chart-sm class="col-sm-6 col-lg-3"
+                         [chartOptions]="chartOptions2"
+                         [dropdownItems]="['Last 7 days', 'Last 30 days', 'Last 3 months']"
+                         title="New clients"
+                         metric="6,782"
+                         [evolution]="0"
+                         [inBody]="true">
+      </app-card-chart-sm>
+      <app-card-chart-sm class="col-sm-6 col-lg-3"
+                         [chartOptions]="chartOptions3"
+                         [dropdownItems]="['Last 7 days', 'Last 30 days', 'Last 3 months']"
+                         title="Active users"
+                         metric="2,986"
+                         [evolution]="4"
+                         [inBody]="true">
+      </app-card-chart-sm>
+      <app-card-chart-sm class="col-sm-6 col-lg-3"
+                         [chartOptions]="chartOptions3"
+                         [dropdownItems]="['Last 7 days', 'Last 30 days', 'Last 3 months']"
+                         title="Active users"
+                         metric="2,986"
+                         [evolution]="4"
+                         [inBody]="true">
+      </app-card-chart-sm>
+      <div class="col-md-6 col-xl-3">
+        <a class="card card-link" href="#">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-auto">
+                <span class="avatar rounded" style="background-image: url(./assets/static/avatars/000f.jpg)"></span>
+              </div>
+              <div class="col">
+                <div class="font-weight-medium">Maryjo Lebarree</div>
+                <div class="text-muted">Civil Engineer</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-xl-3">
+        <a class="card card-link" href="#">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-auto">
+                <span class="avatar rounded" style="background-image: url(./assets/static/avatars/001f.jpg)"></span>
+              </div>
+              <div class="col">
+                <div class="font-weight-medium">Maryjo Lebarree</div>
+                <div class="text-muted">Civil Engineer</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-xl-3">
+        <a class="card card-link" href="#">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-auto">
+                <span class="avatar rounded" style="background-image: url(./assets/static/avatars/001m.jpg)"></span>
+              </div>
+              <div class="col">
+                <div class="font-weight-medium">Maryjo Lebarree</div>
+                <div class="text-muted">Civil Engineer</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-xl-3">
+        <a class="card card-link" href="#">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-auto">
+                <span class="avatar rounded" style="background-image: url(./assets/static/avatars/002m.jpg)"></span>
+              </div>
+              <div class="col">
+                <div class="font-weight-medium">Maryjo Lebarree</div>
+                <div class="text-muted">Civil Engineer</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

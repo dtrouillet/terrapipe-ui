@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'me',
     loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
   },
+  {
+    path: 'uptime',
+    loadChildren: () => import('./uptime/uptime.module').then(m => m.UptimeModule)
+  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**',   component: ErrorComponent}
 ];

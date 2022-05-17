@@ -13,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ChartSmComponent } from './cards/chart-sm/chart-sm.component';
 import {NgApexchartsModule} from 'ng-apexcharts';
 import { IconSmComponent } from './cards/icon-sm/icon-sm.component';
+import { PageUptimeHeaderComponent } from './page-uptime-header/page-uptime-header.component';
+import { MetricsComponent } from './cards/metrics/metrics.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { IconSmComponent } from './cards/icon-sm/icon-sm.component';
     FooterComponent,
     ChartSmComponent,
     IconSmComponent,
+    PageUptimeHeaderComponent,
+    MetricsComponent,
   ],
   exports: [
     HeaderComponent,
@@ -33,7 +37,9 @@ import { IconSmComponent } from './cards/icon-sm/icon-sm.component';
     NotificationComponent,
     FooterComponent,
     ChartSmComponent,
-    IconSmComponent
+    IconSmComponent,
+    PageUptimeHeaderComponent,
+    MetricsComponent
   ],
   imports: [
     CommonModule,

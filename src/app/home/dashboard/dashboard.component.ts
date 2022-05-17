@@ -2,11 +2,10 @@ import {AfterViewInit, Component, Inject, Renderer2} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
 import * as Map from "jsvectormap";
 import 'jsvectormap/dist/maps/world.js'
-import { ApplicationService } from 'ebad-api';
-import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-home-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
@@ -54,10 +53,6 @@ export class DashboardComponent implements AfterViewInit {
 
 
   constructor(@Inject(DOCUMENT) private document: Document) {
-
-    // appService.getAllWrite().subscribe(data => {
-    //   data.content?.map(x => console.log(x.name));
-    // });
     this.chartOptions1 = {
       chart: {
         type: "area",
