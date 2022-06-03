@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {AuthConfig, OAuthService} from 'angular-oauth2-oidc';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+  constructor(private oauthService: OAuthService) { }
 
   ngOnInit(): void {
   }
+
+  login(){
+    this.oauthService.initCodeFlow();
+  }
+
+
 
 }

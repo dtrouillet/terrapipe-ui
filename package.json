@@ -23,6 +23,7 @@
     "@ng-bootstrap/ng-bootstrap": "^12.1.1",
     "@popperjs/core": "^2.10.2",
     "@tabler/icons": "^1.68.0",
+    "angular-oauth2-oidc": "^13.0.1",
     "angular-tabler-icons": "^1.68.0",
     "apexcharts": "^3.35.0",
     "bootstrap": "^5.1.3",

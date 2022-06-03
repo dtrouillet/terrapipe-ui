@@ -38,7 +38,7 @@
                         <span class="avatar avatar-sm"
                               style="background-image: url(./assets/static/avatars/000m.jpg)"></span>
                     <div class="d-none d-xl-block ps-2">
-                        <div>Paweł Kuna</div>
+                        <div>{{username}}</div>
                         <div class="mt-1 small text-muted">UI Designer</div>
                     </div>
                 </a>
@@ -48,7 +48,7 @@
                     <a href="#" class="dropdown-item" ngbDropdownItem>Feedback</a>
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item" ngbDropdownItem routerLink="/me/settings">Settings</a>
-                    <a href="#" class="dropdown-item" ngbDropdownItem routerLink="/auth/signin">Logout</a>
+                    <a href="#" class="dropdown-item" ngbDropdownItem (click)="logout()">Logout</a>
                 </div>
             </div>
         </div>

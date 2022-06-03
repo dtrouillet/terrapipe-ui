@@ -12,6 +12,7 @@ import {ApiModule, Configuration} from 'ebad-api';
 import {HttpClientModule} from '@angular/common/http';
 import {environment} from '../environments/environment';
 import {AuthService} from './auth.service';
+import {OAuthModule} from 'angular-oauth2-oidc';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import {AuthService} from './auth.service';
         TablerIconsModule.pick(TablerIcons),
         NgApexchartsModule,
         ApiModule,
-        HttpClientModule
+        HttpClientModule,
+        OAuthModule.forRoot()
     ],
     providers: [ {
         provide: Configuration,
