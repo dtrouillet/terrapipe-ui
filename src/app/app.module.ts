@@ -13,6 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {environment} from '../environments/environment';
 import {AuthService} from './auth.service';
 import {OAuthModule} from 'angular-oauth2-oidc';
+import {TerrapipeApiModule} from './terrapipe-api/terrapipe-api.module';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import {OAuthModule} from 'angular-oauth2-oidc';
         NgApexchartsModule,
         ApiModule,
         HttpClientModule,
-        OAuthModule.forRoot()
+        OAuthModule.forRoot(),
+        TerrapipeApiModule
     ],
     providers: [ {
         provide: Configuration,

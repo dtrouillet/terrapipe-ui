@@ -3,6 +3,8 @@ import {DOCUMENT} from "@angular/common";
 import * as Map from "jsvectormap";
 import 'jsvectormap/dist/maps/world.js'
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import {TerraformModuleApiService} from '../../terrapipe-api/terraform-module/terraform-module-api.service';
+import {BuildApiService} from '../../terrapipe-api/build/build-api.service';
 
 @Component({
   selector: 'app-home-dashboard',
@@ -52,7 +54,9 @@ export class DashboardComponent implements AfterViewInit {
   public chartOptions12: any;
 
 
-  constructor(@Inject(DOCUMENT) private document: Document) {
+  constructor(@Inject(DOCUMENT) private document: Document,
+              private terraformModuleService: TerraformModuleApiService,
+              private buildService: BuildApiService) {
     this.chartOptions1 = {
       chart: {
         type: "area",
@@ -749,6 +753,14 @@ export class DashboardComponent implements AfterViewInit {
     window.addEventListener("resize", () => {
       map.updateSize();
     });
+
+    this.terraformModuleService.getAll().subscribe(value => {
+      console.log(value)
+    })
+
+    this.buildService.getAll().subscribe(value => {
+        console.log(value)
+    })
   }
 
   drop(event: CdkDragDrop<any[]>) {

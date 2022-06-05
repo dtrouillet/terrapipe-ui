@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'uptime',
     loadChildren: () => import('./uptime/uptime.module').then(m => m.UptimeModule)
   },
+  {
+    path: 'terraform-module',
+    loadChildren: () => import('./terraform-module/terraform-module.module').then(m => m.TerraformModuleModule)
+  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**',   component: ErrorComponent}
 ];
