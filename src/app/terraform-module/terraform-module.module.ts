@@ -4,17 +4,21 @@ import { TerraformModuleListComponent } from './terraform-module-list/terraform-
 import {TerraformModuleRoutingModule} from './terraform-module-routing.module';
 import {TablerIconsModule} from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
+import { TerraformModuleEditModalComponent } from './terraform-module-edit-modal/terraform-module-edit-modal.component';
+import {FormsModule} from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    TerraformModuleListComponent
+    TerraformModuleListComponent,
+    TerraformModuleEditModalComponent
   ],
   imports: [
     CommonModule,
     TerraformModuleRoutingModule,
-    TablerIconsModule.pick(TablerIcons)
+    TablerIconsModule.pick(TablerIcons),
+    FormsModule
   ]
 })
 export class TerraformModuleModule { }

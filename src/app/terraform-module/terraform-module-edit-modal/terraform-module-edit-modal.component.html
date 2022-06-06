@@ -1,0 +1,72 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">New Module</h5>
+    <button type="button" class="btn-close" (click)="modal.dismiss('X')" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <form (submit)="createOrUpdate(terraformModuleForm)" #terraformModuleForm>
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input required name="name" [(ngModel)]="terraformModule.name" id="name" type="text" class="form-control"  placeholder="Your module name">
+      </div>
+      <label class="form-label">Module type</label>
+      <div class="form-selectgroup-boxes row mb-3">
+        <div class="col-lg-6">
+          <label class="form-selectgroup-item">
+            <input  type="radio" value="1" class="form-selectgroup-input" checked>
+            <span class="form-selectgroup-label d-flex align-items-center p-3">
+                    <span class="me-3">
+                      <span class="form-selectgroup-check"></span>
+                    </span>
+                    <span class="form-selectgroup-label-content">
+                      <span class="form-selectgroup-title strong mb-1">Git module</span>
+                      <span class="d-block text-muted">Provide only basic git support</span>
+                    </span>
+                  </span>
+          </label>
+        </div>
+        <div class="col-lg-6">
+          <label class="form-selectgroup-item">
+            <input type="radio" name="report-type" value="1" class="form-selectgroup-input">
+            <span class="form-selectgroup-label d-flex align-items-center p-3">
+                    <span class="me-3">
+                      <span class="form-selectgroup-check"></span>
+                    </span>
+                    <span class="form-selectgroup-label-content">
+                      <span class="form-selectgroup-title strong mb-1">Other</span>
+                      <span class="d-block text-muted">Other type module, not support yet</span>
+                    </span>
+                  </span>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="mb-3">
+            <label class="form-label">Git url</label>
+            <div class="input-group input-group-flat">
+              <input required name="url" [(ngModel)]="terraformModule.url" id="url" type="text" class="form-control"  autocomplete="off" placeholder="ssh://mygiturl">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="mb-3">
+            <label class="form-label">Branch</label>
+            <div class="input-group input-group-flat">
+              <input required name="branch" [(ngModel)]="terraformModule.branch" id="branch" type="text" class="form-control" autocomplete="off">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a (click)="modal.dismiss('cancel')" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+      Cancel
+    </a>
+    <a (click)="createOrUpdate(terraformModuleForm)" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+      <i-tabler name="plus" class="icon"></i-tabler>
+      Create new module
+    </a>
+  </div>
+</div>

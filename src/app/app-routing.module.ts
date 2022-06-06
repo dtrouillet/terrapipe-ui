@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'terraform-module',
     loadChildren: () => import('./terraform-module/terraform-module.module').then(m => m.TerraformModuleModule)
   },
+  {
+    path: 'build',
+    loadChildren: () => import('./build/build.module').then(m => m.BuildModule)
+  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**',   component: ErrorComponent}
 ];

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {TerraformModuleApiService} from '../../terrapipe-api/terraform-module/terraform-module-api.service';
 import {TerraformModule} from '../../terrapipe-api/terraform-module/terraform-module-model';
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {TerraformModuleEditModalComponent} from '../terraform-module-edit-modal/terraform-module-edit-modal.component';
 
 @Component({
   selector: 'app-terraform-module-list',
@@ -19,9 +20,12 @@ export class TerraformModuleListComponent implements OnInit {
     this.terraformModuleApiService.getAll().subscribe(modules => this.modules = modules);
   }
 
-  open(content: any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title', size: 'lg'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
+  open() {
+    this.modalService.open(TerraformModuleEditModalComponent, {ariaLabelledBy: 'modal-basic-title', size: 'lg'}).result.then((result) => {
+      this.closeResult = `Closed with: ${JSON.stringify(result)}`;
+      this.terraformModuleApiService.create(result).subscribe(
+        module => this.modules.push(module)
+      )
       console.log(this.closeResult);
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
