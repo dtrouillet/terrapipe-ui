@@ -36,7 +36,7 @@ export class BuildVariablesComponent implements OnInit {
               private terraformModuleApiService: TerraformModuleApiService) { }
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      var id = params.get('id') || "";
+      const id = params.get('id') || "";
       this.buildApiService.get(id).subscribe(build => {
         this.build = build;
         if( build.variables ) {
