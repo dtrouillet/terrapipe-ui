@@ -16,4 +16,7 @@ export class TerraformModuleApiService {
     return this.apiService.put(`/terraform-module`, terraformModule);
   }
 
+  get(terraformModuleId: string): Observable<TerraformModule> {
+    return this.apiService.get(`/terraform-module/${terraformModuleId}`);
+  }
 }

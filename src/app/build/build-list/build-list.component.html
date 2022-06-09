@@ -12,9 +12,9 @@
       <div class="col-12 col-md-auto ms-auto d-print-none">
         <div class="d-flex">
           <input type="search" class="form-control d-inline-block w-9 me-3" placeholder="Search module…"/>
-          <a (click)="open()" class="btn btn-primary">
+          <a routerLink="/build/new" class="btn btn-primary">
             <i-tabler name="plus" class="icon"></i-tabler>
-            New Module
+            New Build
           </a>
         </div>
       </div>
@@ -36,9 +36,9 @@
           </div>
           <div class="d-flex">
             <a href="#" class="card-btn">
-              <i-tabler name="settings" class="icon me-2 text-muted"></i-tabler>
+              <i-tabler name="run" class="icon me-2 text-muted"></i-tabler>
               Run</a>
-            <a href="#" class="card-btn">
+            <a routerLink="/build/{{build.id}}" class="card-btn">
               <i-tabler name="pencil" class="icon me-2 text-muted"></i-tabler>
               Details</a>
           </div>

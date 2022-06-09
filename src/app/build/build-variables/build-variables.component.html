@@ -30,30 +30,18 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Build</h3>
+              <h3 class="card-title">Variables</h3>
             </div>
             <div class="card-body">
-              <form #formBuild (submit)="saveOrUpdate(formBuild)">
+              <div *ngFor="let variable of terraformModule.variables">
                 <div class="form-group mb-3 row">
-                  <label class="form-label col-3 col-form-label">Name</label>
+                  <label class="form-label col-3 col-form-label">{{variable.name}}</label>
                   <div class="col">
-                    <input type="text" name="name" id="name" [(ngModel)]="build.name" class="form-control"
-                           placeholder="Enter name">
+                    <input required="{{variable.required && !variable.defaultValue}}" type="text" name="{{variable.name}}" id="{{variable.name}}" class="form-control"
+                           value="{{variablesMaps.get(variable.name)?.value}}" placeholder="{{variable.description}}, default value is {{variable.defaultValue}}">
                   </div>
                 </div>
-                <div class="form-group mb-3 row">
-                  <label class="form-label col-3 col-form-label">Terraform Module</label>
-                  <div class="col">
-                    <select class="form-select" name="terraformModuleId" [(ngModel)]="build.terraformModuleId">
-                      <option *ngFor="let module of terraformModules" value="{{module.id}}">{{module.name}}</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-footer">
-                  <button type="submit" class="btn btn-primary">Save</button>
-                  <button type="button" class="ms-1 btn btn-danger" (click)="delete()">Delete</button>
-                </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
