@@ -14,8 +14,11 @@
       </div>
       <div class="col-auto">
         <div class="btn-list">
-          <a href="#" class="btn btn-primary">
+          <a (click)="runBuild()" class="btn btn-primary">
             Run
+          </a>
+          <a (click)="destroyBuild()" class="btn btn-danger">
+            Destroy
           </a>
         </div>
       </div>
@@ -33,15 +36,22 @@
               <h3 class="card-title">Variables</h3>
             </div>
             <div class="card-body">
-              <div *ngFor="let variable of terraformModule.variables">
-                <div class="form-group mb-3 row">
-                  <label class="form-label col-3 col-form-label">{{variable.name}}</label>
-                  <div class="col">
-                    <input required="{{variable.required && !variable.defaultValue}}" type="text" name="{{variable.name}}" id="{{variable.name}}" class="form-control"
-                           value="{{variablesMaps.get(variable.name)?.value}}"  placeholder="{{variable.description}}, default value is {{variable.defaultValue}}">
+              <form #formVariables (submit)="save(formVariables)">
+                <div *ngFor="let variable of terraformModule.variables">
+                  <div class="form-group mb-3 row">
+                    <label class="form-label col-3 col-form-label">{{variable.name}}</label>
+                    <div class="col">
+                      <input required="{{variable.required && !variable.defaultValue}}" type="text"
+                             name="{{variable.name}}" id="{{variable.name}}" class="form-control"
+                             [(ngModel)]="variablesMaps.get(variable.name)!.value"
+                             placeholder="{{variable.description}}, default value is {{variable.defaultValue}}">
+                    </div>
                   </div>
                 </div>
-              </div>
+                <div class="form-footer">
+                  <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

@@ -34,6 +34,7 @@ export class BuildVariablesComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private buildApiService: BuildApiService,
               private terraformModuleApiService: TerraformModuleApiService) { }
+
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
       const id = params.get('id') || "";
@@ -46,9 +47,39 @@ export class BuildVariablesComponent implements OnInit {
         }
         this.terraformModuleApiService.get(build.terraformModuleId).subscribe(module => {
           this.terraformModule = module
+          for (let variable of this.terraformModule.variables) {
+            if (!this.variablesMaps.has(variable.name)) {
+
+              let terraformVariable: TerraformVariable = {
+                name: variable.name,
+                value: variable.defaultValue,
+              }
+              this.variablesMaps.set(variable.name, terraformVariable);
+            }
+          }
         });
       });
     })
   }
 
+  save(formVariables: HTMLFormElement) {
+    if (!formVariables.checkValidity()) {
+      return
+    }
+    this.buildApiService.saveVariables(this.build.id, [...this.variablesMaps.values()]).subscribe(
+      vars => console.log(`ok ${vars}`)
+      )
+  }
+
+  runBuild() {
+    this.buildApiService.run(this.build.id).subscribe(
+      () => console.log(`ok`)
+    )
+  }
+
+  destroyBuild() {
+    this.buildApiService.destroy(this.build.id).subscribe(
+      () => console.log(`ok`)
+    )
+  }
 }

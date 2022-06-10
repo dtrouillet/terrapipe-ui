@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import {ApiService} from '../api.service';
-import {Build} from './build-model';
+import {Build, TerraformVariable} from './build-model';
 
 @Injectable()
 export class BuildApiService {
@@ -22,5 +22,17 @@ export class BuildApiService {
 
   delete(id: string): Observable<void> {
     return this.apiService.delete(`/build/${id}`);
+  }
+
+  saveVariables(id: string, variables: TerraformVariable[]) {
+    return this.apiService.put(`/build/vars/${id}`, variables);
+  }
+
+  run(id: string) {
+    return this.apiService.post(`/build/run/${id}`);
+  }
+
+  destroy(id: string) {
+    return this.apiService.post(`/build/destroy/${id}`);
   }
 }
