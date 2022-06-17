@@ -6,13 +6,15 @@ import {TablerIconsModule} from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
 import { TerraformModuleEditModalComponent } from './terraform-module-edit-modal/terraform-module-edit-modal.component';
 import {FormsModule} from '@angular/forms';
+import { TerraformModuleDetailsComponent } from './terraform-module-details/terraform-module-details.component';
 
 
 
 @NgModule({
   declarations: [
     TerraformModuleListComponent,
-    TerraformModuleEditModalComponent
+    TerraformModuleEditModalComponent,
+    TerraformModuleDetailsComponent
   ],
   imports: [
     CommonModule,

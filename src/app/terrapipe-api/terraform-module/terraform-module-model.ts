@@ -1,5 +1,5 @@
 export interface TerraformModule  {
-  id: string;
+  id: string | undefined;
   name: string;
   branch: string;
   url: string;

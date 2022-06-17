@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Build, TerraformVariable} from '../../terrapipe-api/build/build-model';
+import {Component, OnInit} from '@angular/core';
+import {Build} from '../../terrapipe-api/build/build-model';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {BuildApiService} from '../../terrapipe-api/build/build-api.service';
 import {BuildExecution} from '../../terrapipe-api/build-execution/build-execution-model';

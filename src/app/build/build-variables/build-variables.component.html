@@ -45,6 +45,7 @@
                              name="{{variable.name}}" id="{{variable.name}}" class="form-control"
                              [(ngModel)]="variablesMaps.get(variable.name)!.value"
                              placeholder="{{variable.description}}, default value is {{variable.defaultValue}}">
+                      <small class="form-hint">{{variable.type}}</small>
                     </div>
                   </div>
                 </div>

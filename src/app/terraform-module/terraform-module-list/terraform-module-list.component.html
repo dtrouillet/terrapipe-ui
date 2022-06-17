@@ -35,12 +35,12 @@
             </div>
           </div>
           <div class="d-flex">
-            <a href="#" class="card-btn">
+            <a (click)="refresh(module)" class="card-btn">
               <i-tabler name="settings" class="icon me-2 text-muted"></i-tabler>
-              New Build</a>
-            <a href="#" class="card-btn">
+              Refresh</a>
+            <a [routerLink]="'./'+module.id+'/details'" class="card-btn">
               <i-tabler name="pencil" class="icon me-2 text-muted"></i-tabler>
-              Edit</a>
+              Details</a>
           </div>
         </div>
       </div>

@@ -1,0 +1,53 @@
+<div class="container-xl">
+  <div class="page-header mb-3">
+    <div class="row align-items-center mw-100">
+      <div class="col">
+        <div class="mb-1">
+          <ol class="breadcrumb" aria-label="breadcrumbs">
+            <li class="breadcrumb-item"><a routerLink="/terraform-module">Terraform Module</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#">Details</a></li>
+          </ol>
+        </div>
+        <!--        <h2 class="page-title">-->
+        <!--          <span class="text-truncate">Edit</span>-->
+        <!--        </h2>-->
+      </div>
+      <div class="col-auto">
+        <div class="btn-list">
+          <a href="#" class="btn btn-primary">
+            Run
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-12">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Terraform Module</h3>
+            </div>
+            <div class="card-body">
+              <form #formModule (submit)="saveOrUpdate(formModule)">
+                <div class="form-group mb-3 row">
+                  <label class="form-label col-3 col-form-label">Name</label>
+                  <div class="col">
+                    <input type="text" name="name" id="name" [(ngModel)]="terraformModule.name" class="form-control"
+                           placeholder="Enter name">
+                  </div>
+                </div>
+
+                <div class="form-footer">
+                  <button type="submit" class="btn btn-primary">Save</button>
+                  <button type="button" class="ms-1 btn btn-danger" (click)="delete()">Delete</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

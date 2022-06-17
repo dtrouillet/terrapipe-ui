@@ -10,7 +10,7 @@ import {TerraformModule} from '../../terrapipe-api/terraform-module/terraform-mo
 export class TerraformModuleEditModalComponent implements OnInit {
   isUpdate = false;
   terraformModule: TerraformModule = {
-    branch: '', id: '', keyPassphrase: '', name: '', privateKey: '', url: '', variables: []
+    branch: '', id: undefined, keyPassphrase: '', name: '', privateKey: '', url: '', variables: []
   };
 
   constructor(public modal: NgbActiveModal) { }

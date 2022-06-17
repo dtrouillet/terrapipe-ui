@@ -43,4 +43,9 @@ export class TerraformModuleListComponent implements OnInit {
     }
   }
 
+  refresh(module: TerraformModule) {
+    this.terraformModuleApiService.refresh(module.id!).subscribe(
+      () =>  console.log("refreshed")
+    )
+  }
 }

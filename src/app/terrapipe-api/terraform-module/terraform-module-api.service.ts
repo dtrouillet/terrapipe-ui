@@ -16,7 +16,19 @@ export class TerraformModuleApiService {
     return this.apiService.put(`/terraform-module`, terraformModule);
   }
 
+  refresh(terraformModuleId: string): Observable<void> {
+    return this.apiService.post(`/terraform-module/refresh/${terraformModuleId}`);
+  }
+
   get(terraformModuleId: string): Observable<TerraformModule> {
     return this.apiService.get(`/terraform-module/${terraformModuleId}`);
   }
+
+  delete(terraformModuleId: string): Observable<void> {
+    return this.apiService.delete(`/terraform-module/${terraformModuleId}`);
+  }
+
+  // update(terraformModule: TerraformModule): Observable<TerraformModule> {
+  //   return this.apiService.post(`/terraform-module/{`, terraformModule);
+  // }
 }
