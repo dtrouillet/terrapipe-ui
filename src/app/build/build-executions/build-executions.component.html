@@ -71,7 +71,7 @@
                   <td>{{getExecutionTime(buildExecution)}}</td>
                   <td>{{buildExecution.startDate | date}}</td>
                   <td>
-                    <span class="badge bg-success me-1" [ngClass]="{'bg-success': buildExecution.status === 'FINISHED',
+                    <span class="badge bg-success me-1" [ngClass]="{'bg-success': buildExecution.status === 'FINISHED','bg-danger': buildExecution.status === 'ERROR',
                     'bg-warning': buildExecution.status === 'PENDING', 'bg-blue': buildExecution.status === 'RUNNING'}"></span> {{buildExecution.status}}
                   </td>
                   <td>Damien Trouillet</td>
