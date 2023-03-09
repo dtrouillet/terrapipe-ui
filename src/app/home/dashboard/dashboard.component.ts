@@ -13,7 +13,7 @@ import {BuildApiService} from '../../terrapipe-api/build/build-api.service';
 })
 export class DashboardComponent implements AfterViewInit {
 
-  title = 'ebad';
+  title = 'terrapipe';
 
   cards = [{
     icon: 'currency-dollar',

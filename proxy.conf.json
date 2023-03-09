@@ -1,6 +1,6 @@
 {
-  "/ebad": {
-    "target": "http://localhost:11006",
+  "/api": {
+    "target": "http://localhost:8080",
     "secure": false
   }
 }

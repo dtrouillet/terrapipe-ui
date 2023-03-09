@@ -8,7 +8,7 @@ import {NgApexchartsModule} from 'ng-apexcharts';
 import {ShareModule} from './share/share.module';
 import {TablerIconsModule} from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
-import {ApiModule, Configuration} from 'ebad-api';
+import {ApiModule, Configuration} from 'terrapipe-api';
 import {HttpClientModule} from '@angular/common/http';
 import {environment} from '../environments/environment';
 import {AuthService} from './auth.service';
