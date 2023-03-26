@@ -9,10 +9,17 @@ export class ConfigurationService {
   private stickyTop = new BehaviorSubject(true);
   private navbarCollapsed = new BehaviorSubject(false);
   private darkMode = new BehaviorSubject(false);
+  baseUrl: string = "";
+  apiUrl: string = "";
+  issuer: string = ""
+
   private configuration: Configuration = {
     stickyTop: true,
     navbarCollapsed: true,
-    darkMode: false
+    darkMode: false,
+    baseUrl: this.baseUrl,
+    apiUrl: this.apiUrl,
+    issuer: this.issuer
   }
 
   constructor() {

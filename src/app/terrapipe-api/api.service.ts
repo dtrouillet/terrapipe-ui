@@ -1,13 +1,14 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {ConfigurationService} from '../core/configuration.service';
 
 @Injectable()
 export class ApiService {
-  configService = {"apiUrl": "http://localhost:8080/api"}
 
   constructor(
     private http: HttpClient,
+    private configService: ConfigurationService
   ) {
   }
 

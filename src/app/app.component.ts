@@ -14,7 +14,7 @@ export class AppComponent {
   stickyTop = true;
   authCodeFlowConfig: AuthConfig = {
     // Url of the Identity Provider
-    issuer: 'http://idp.localfaya.fr/realms/test',
+    issuer: this.configurationService.issuer,
 
     // URL of the SPA to redirect the user to after login
     redirectUri: window.location.origin + '/',

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: '/api/',
+  configLocation: './assets/local-config.json'
 };

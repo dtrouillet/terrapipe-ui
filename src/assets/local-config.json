@@ -1,0 +1,5 @@
+{
+  "baseUrl": "http://terrapipe.local",
+  "apiUrl": "http://terrapipe.local/api",
+  "issuer": "http://idp.local/realms/test"
+}
