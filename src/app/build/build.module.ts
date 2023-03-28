@@ -8,6 +8,7 @@ import {FormsModule} from '@angular/forms';
 import { BuildMenuComponent } from './build-menu/build-menu.component';
 import { BuildVariablesComponent } from './build-variables/build-variables.component';
 import { BuildExecutionsComponent } from './build-executions/build-executions.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -23,7 +24,8 @@ import { BuildExecutionsComponent } from './build-executions/build-executions.co
     CommonModule,
     TablerIconsModule,
     BuildRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ]
 })
 export class BuildModule { }

@@ -40,7 +40,8 @@
                 <div class="text-muted">
                   Show
                   <div class="mx-2 d-inline-block">
-                    <input type="text" class="form-control form-control-sm" value="8" size="3" aria-label="Invoices count">
+                    <input type="text" class="form-control form-control-sm" value="8" size="3"
+                           aria-label="Invoices count">
                   </div>
                   entries
                 </div>
@@ -67,7 +68,7 @@
                 <tbody>
                 <tr *ngFor="let buildExecution of buildExecutions">
                   <td><span class="text-muted">{{buildExecution.id}}</span></td>
-<!--                  <td>{{buildExecution.endDate ? buildExecution.endDate.getTime() - buildExecution.startDate.getTime() : ''}}</td>-->
+                  <!--                  <td>{{buildExecution.endDate ? buildExecution.endDate.getTime() - buildExecution.startDate.getTime() : ''}}</td>-->
                   <td>{{getExecutionTime(buildExecution)}}</td>
                   <td>{{buildExecution.startDate | date}}</td>
                   <td>
@@ -76,17 +77,18 @@
                   </td>
                   <td>Damien Trouillet</td>
                   <td class="text-end">
-                            <span class="dropdown">
-                              <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-                              <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#">
-                                  Action
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                  Another action
-                                </a>
-                              </div>
-                            </span>
+                      <div class="dropdown d-inline-block" ngbDropdown boundary="viewport">
+                        <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-boundary="viewport"
+                                data-bs-toggle="dropdown" ngbDropdownToggle>Actions</button>
+                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                          <a ngbDropdownItem class="dropdown-item" href="#">
+                            Action
+                          </a>
+                          <a ngbDropdownItem class="dropdown-item" href="#">
+                            Another action
+                          </a>
+                        </div>
+                      </div>
                   </td>
                 </tr>
                 </tbody>
