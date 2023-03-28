@@ -81,11 +81,17 @@
                         <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-boundary="viewport"
                                 data-bs-toggle="dropdown" ngbDropdownToggle>Actions</button>
                         <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-                          <a ngbDropdownItem class="dropdown-item" href="#">
-                            Action
+                          <a ngbDropdownItem class="dropdown-item" (click)="showLogs(buildExecution)">
+                            Show logs
                           </a>
                           <a ngbDropdownItem class="dropdown-item" href="#">
-                            Another action
+                            Show resources
+                          </a>
+                          <a ngbDropdownItem class="dropdown-item" href="#">
+                            Show output
+                          </a>
+                          <a ngbDropdownItem class="dropdown-item" href="#">
+                            Get tfstate
                           </a>
                         </div>
                       </div>

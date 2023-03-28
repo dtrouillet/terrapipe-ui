@@ -1,0 +1,14 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">Logs</h5>
+    <button type="button" class="btn-close" (click)="modal.dismiss('X')" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    {{this.logs}}
+  </div>
+  <div class="modal-footer">
+    <a (click)="modal.dismiss('close')" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+      Close
+    </a>
+  </div>
+</div>

@@ -9,6 +9,9 @@ import { BuildMenuComponent } from './build-menu/build-menu.component';
 import { BuildVariablesComponent } from './build-variables/build-variables.component';
 import { BuildExecutionsComponent } from './build-executions/build-executions.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {
+  TerraformBuildLogsModalComponent
+} from './build-executions/terraform-build-logs-modal/terraform-build-logs-modal.component';
 
 
 
@@ -18,7 +21,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     BuildDetailsComponent,
     BuildMenuComponent,
     BuildVariablesComponent,
-    BuildExecutionsComponent
+    BuildExecutionsComponent,
+    TerraformBuildLogsModalComponent
   ],
   imports: [
     CommonModule,
