@@ -12,6 +12,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {
   TerraformBuildLogsModalComponent
 } from './build-executions/terraform-build-logs-modal/terraform-build-logs-modal.component';
+import {NgTerminalModule} from 'ng-terminal';
 
 
 
@@ -29,7 +30,8 @@ import {
     TablerIconsModule,
     BuildRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    NgTerminalModule
   ]
 })
 export class BuildModule { }

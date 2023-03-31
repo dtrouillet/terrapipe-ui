@@ -4,7 +4,7 @@
     <button type="button" class="btn-close" (click)="modal.dismiss('X')" aria-label="Close"></button>
   </div>
   <div class="modal-body">
-    {{this.logs}}
+    <ng-terminal #term></ng-terminal>
   </div>
   <div class="modal-footer">
     <a (click)="modal.dismiss('close')" class="btn btn-link link-secondary" data-bs-dismiss="modal">
