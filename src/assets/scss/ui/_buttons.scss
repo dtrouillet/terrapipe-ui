@@ -1,6 +1,6 @@
 .btn {
   --#{$variable-prefix}btn-color-text-rgb: var(--#{$variable-prefix}body-color-rgb);
-
+  --#{$prefix}btn-color: "";
   display: inline-flex;
   align-items: center;
   justify-content: center;
